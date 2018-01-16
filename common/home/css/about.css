@@ -1,0 +1,26 @@
+.title{width: 355px; height: 133px; padding-top: 100px; background: url(../img/titel_bg_03.png) no-repeat; text-align: center; margin: 0 auto;}
+.title h3{font-size: 32px; font-family: Cambria Math; line-height: 39px;  font-weight:normal;}
+.title h3 span{color: #dd1e11;}
+
+
+.content{width: 1200px; margin: 0 auto;}
+.content .sidebar{float: left; width: 303px;}
+.content .sidebar h3{float: left; display: block; width: 303px; height: 67px; background: #2295e3; text-align: center; font-size: 21px; font-family: "微软雅黑"; color: #ffffff; line-height: 67px; margin-bottom: 3px;}
+.content .sidebar ul{float: left;}
+.content .sidebar ul li a{display: block; width: 303px; height: 54px; color: #ffffff; border-bottom: 3px solid #96cbef; background: #2ca6f8; text-align: center; line-height: 54px; font-size: 19px; font-family: "微软雅黑";}
+.content .sidebar ul li:first-child{border-top:3px solid #1d86cd ;}
+.content .sidebar ul li div{width: 303px; height: 19px; border-bottom: 0px; background: #2ca6f8;}
+.content .sidebar ul li a:hover{background: #dc2824;}
+.content .sidebar ul li .current{background: #DC2824;}
+
+.location_main{width: 878px;  float: right; }
+.location_main .location{width: 878px; height: 64px; float: right; background: url(../img/location.png) no-repeat;}
+.location_main .location h4{font-weight: normal; font-size: 24px; font-family: "微软雅黑"; color: #ffffff;display: block; float: left; line-height: 55px; margin-left: 63px;}
+.location_main .location p{display: block; float: right; font-size: 16px; font-family: "微软雅黑"; color: #ffffff; margin-right: 14px; line-height: 64px;}
+.location_main .location p a{font-size: 16px; font-family: "微软雅黑"; color: #ffffff;}
+.location_main .location p span{color: #dc2824;}
+
+
+.location_main .main{float: right; background: #f7f8f8;  width: 828px; margin: -8px 13px 0px 0px; padding-left:27px ; padding-bottom: 45px;}
+.location_main .main p{float: left; display: block; width: 603px; font-size: 21px; font-family: "微软雅黑"; line-height: 58px; margin-top: 44px; text-indent: 2em;}
+.location_main .main img{float: right; margin-top: 50px; margin-bottom: 25px;}

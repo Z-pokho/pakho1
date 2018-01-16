@@ -1,0 +1,42 @@
+
+	
+		<div class="content">
+			
+			<div class="title">
+				<div class="title_nbsp"></div>
+				<h3 id="jb"><span>Company</span> &nbsp;introduction</h3>
+				<h3>公司介绍</h3>
+			</div>
+			
+			<div class="sidebar">
+				<h3>公司介绍</h3>
+				<ul>
+			  <?php foreach ($about_cate as $value ) { ?>
+					<li><a href="index.php?mot=home&ctl=about&id=<?php echo $value['id'] ?>#jb"<?php echo $value['id']==$id?'class="current"':''; ?>><?php echo $value['cate_name'] ?></a></li>
+				<?php } ?>
+				</ul>
+			</div>
+			<div class="location_main" >
+				<div class="location">
+					<h4><?php echo $cate_name['cate_name'] ?></h4>
+					<p><a href="<?php echo INDEX ?>">博兰特有限公司</a>&gt;<a href="<?php echo ABOUT ?>"><span>公司介绍</span></a></p>
+				</div>
+			
+				<div class="main">
+
+                <?php foreach ($about_list as $key => $values) { 
+                $values['details'] = strip_tags(htmlspecialchars_decode($values['details'])); ?>
+					<p style="width:603px;" ><?php echo $values['details'] ?></p>
+                 <div class="img" style="float: right;width: 223px;" >
+					<img style="width:223px;height:138px;" src="<?php echo $values['image1'] ?>" alt="" />
+					<img style="width:223px;height:138px;" src="<?php echo $values['image2'] ?>" alt="" />
+					<img style="width:223px;height:138px;" src="<?php echo $values['image3'] ?>" alt="" />
+                  </div>
+				<?php } ?>
+
+				</div>
+			
+			</div>
+		</div>
+
+                    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="<?php echo H_COMMON ?>css/common.css" />
+		<link rel="stylesheet" href="<?php echo H_COMMON ?>css/<?php echo $_C ?>.css" />
+		<script type="text/javascript" src="<?php echo H_COMMON ?>js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="<?php echo H_COMMON ?>js/jquery.SuperSlide.2.1.1.js" ></script>
+		<script type="text/javascript" src="<?php echo H_COMMON ?>js/value.js" ></script>
+		<script type="text/javascript" src="<?php echo H_COMMON ?>js/common.js" ></script>
+		<title><?php echo $title ?></title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="topbox">
+				<div class="top_bg">
+					<div class="top">
+						<a href="<?php echo INDEX ?>"><img src="<?php echo $logo['image'] ?>" /></a>
+						<ul>
+						
+						<?php foreach ($menu as $key => $value) { ?>
+						
+							<li>
+
+							<a href="<?php echo $value['urls'] ?>"<?php echo strtolower($value['controller'])==$_C ?'class="current"':''?>><?php echo $value['menu_name'] ?></a>
+
+							</li>
+						
+							<?php } ?>
+						
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div class="banner">
+				<div class="bd">
+					<ul>
+						
+                    <?php foreach ($banner as $key => $v) { ?>
+						
+					
+						<li>
+							<a href="<?php echo PRODUCT ?>">
+								<img src="<?php echo $v['image'] ?>" />	
+							</a>
+						</li>
+						
+					<?php } ?>
+					</ul>
+				</div>	
+				<ul class="hd">
+						<li class="on"><a href="###"></a></li>
+						<li><a href="###"></a></li>
+						<li><a href="###"></a></li>				
+				</ul>
+					
+				<a class="prev" href="###"><img src="<?php echo H_COMMON ?>img/prev.png" /></a>
+				<a class="next" href="###"><img src="<?php echo H_COMMON ?>img/next.png" /></a>
+					
+			</div>
+		
+		</div>

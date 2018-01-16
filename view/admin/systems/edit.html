@@ -1,0 +1,181 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="<?php echo ADMIN ?>/favicon.ico" >
+<link rel="Shortcut Icon" href="<?php echo ADMIN ?>/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="<?php echo ADMIN ?>static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo ADMIN ?>static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo ADMIN ?>lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo ADMIN ?>static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="<?php echo ADMIN ?>static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>添加用户 - H-ui.admin v3.1</title>
+<meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+</head>
+<body>
+<article class="page-container">
+	<form action="index.php?mot=admin&ctl=systems&act=edit" method="post" class="form form-horizontal" id="form-add">
+		<div class="row cl">
+		<input type="hidden" name="id" value="<?php echo $result['id'] ?>" />
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>菜单名称：</label>
+			<div class="formControls col-xs-8 col-sm-3">
+				<input type="text" class="input-text" value="<?php echo $result['menu_name']?>" placeholder="" id="username" name="menu_name">
+			</div>
+		</div>
+
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>菜单所属分类：</label>
+			<div class="formControls col-xs-8 col-sm-3"> <span class="select-box">
+				<select class="select" size="1" name="category_id">
+				    <option value="0">顶级分类</option>
+				   <?php foreach ($arr as $key => $value){ ?>
+                      
+                   <option <?php echo $value['id']==$result['category_id']?'selected':'' ?> value="<?php echo $value['id'] ?>"><?php echo $value['menu_name'] ?></option>
+					<?php } ?>
+				</select>
+				</span> 
+			</div>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>菜单是否显示：</label>
+			<div class="formControls col-xs-8 col-sm-3 skin-minimal">
+				<div class="radio-box">
+					<input name="display" type="radio" checked  value="1" <?php echo $result['display']==1?'checked':'' ?>>
+					<label for="sex-1">显示</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio"  name="display"  value="0" <?php echo $result['display']==0?'checked':'' ?>>
+					<label for="sex-2">隐藏</label>
+				</div>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>菜单位置：</label>
+			<div class="formControls col-xs-8 col-sm-3">
+				<input type="text" class="input-text" value="<?php echo $result['place'] ?>" placeholder="" name="place" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>控制器名：</label>
+			<div class="formControls col-xs-8 col-sm-3">
+				<input type="text" class="input-text" value="<?php echo $result['controller']?>" id="username" name="controller" >
+			</div>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>操作方法名：</label>
+			<div class="formControls col-xs-8 col-sm-3">
+				<input type="text" class="input-text" value="<?php echo $result['action']?>" id="username" name="action">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>菜单模块：</label>
+			<div class="formControls col-xs-8 col-sm-3 skin-minimal">
+				<div class="radio-box">
+					<input type="radio"  name="distinction" checked value="1" <?php echo $result['distinction']==1?'checked':'' ?>>
+					<label for="sex-2">后台</label>
+				</div>
+				<div class="radio-box">
+					<input name="distinction" type="radio"   value="2" <?php echo $result['distinction']==2?'checked':'' ?>>
+					<label for="sex-1">前台</label>
+				</div>
+			</div>
+		</div>
+         <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>小图标：</label>
+			<div class="formControls col-xs-8 col-sm-4">
+				<input type="text" class="input-text" value="" placeholder="" id="username" name="icon">
+			</div>
+			<label class="form-label col-xs-4 col-sm-7"><a href="http://www.h-ui.net/Hui-3.7-Hui-iconfont.shtml" target="_bank"><span class="c-red">选择小图标</span></a>（例如：以"&"开头）</label>
+		</div>
+
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">备注：</label>
+			<div class="formControls col-xs-4 col-sm-4">
+				<textarea name="remarks" cols="" rows="" class="textarea"  placeholder="说点什么吧..." onKeyUp="$.Huitextarealength(this,100)"><?php echo $result['remarks'] ?></textarea>
+				<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+			</div>
+		</div>
+
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="<?php echo ADMIN ?>static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="<?php echo ADMIN ?>static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本--> 
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="<?php echo ADMIN ?>lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	$("#form-member-add").validate({
+		rules:{
+			username:{
+				required:true,
+				minlength:2,
+				maxlength:16
+			},
+			sex:{
+				required:true,
+			},
+			mobile:{
+				required:true,
+				isMobile:true,
+			},
+			email:{
+				required:true,
+				email:true,
+			},
+			uploadfile:{
+				required:true,
+			},
+			
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			//$(form).ajaxSubmit();
+			var index = parent.layer.getFrameIndex(window.name);
+			//parent.$('.btn-refresh').click();
+			parent.layer.close(index);
+		}
+	});
+});
+</script> 
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

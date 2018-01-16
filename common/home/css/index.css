@@ -1,0 +1,84 @@
+.content{width: 100%;}
+.about{width: 1200px; margin: 0 auto;}
+.title{ width: 370px; height: 133px; background: url(../img/titel_bg_03.png) no-repeat; text-align: center; margin: 0 auto; padding-top:100px ;}
+.title h3{font-size: 32px; /*font-family: Cambria Math;*/ line-height: 39px;  font-weight:normal;}
+.title h3 span{color: #dd1e11;}
+
+
+
+.about_bg{ width: 400px; height: 200px; background: url(../img/about_bg_03.png) no-repeat; text-align: center; }
+.about_bg h4{ padding-top: 27px; font-size: 24px; font-weight: normal;  text-align: center; width: 100%; }
+.about_bg h4 a{display: block; margin: 0 auto; text-align: center;}
+.about_bg p{font-size: 21px; color: #8d8b8b; line-height: 34px; }
+
+
+.about_us li{float: left;}
+.about_us li img{ width: 400px; height: 399px; margin-bottom: -5px;}
+.about_bg:hover{background: #2295e3; color: #ffffff;}
+.about_bg:hover a{color: #ffffff;}
+.about_bg:hover p{color: #ffffff;}
+
+
+.productbox{width: 1200px; margin: 30px auto 0 auto; overflow: hidden;}
+.product{width: 1200px; margin: 0 auto;}
+.product ul{ width: 1332px; margin: 0 auto;}
+.product ul li{margin-right: 132px; float: left; margin-bottom: 55px; position: relative;}
+.product ul li a img{width: 201px; height: 265px;}
+.product ul li a span{width: 201px; height: 30px; display: block; background: #828282; bottom: 17px; position: absolute; text-align: center; line-height: 30px; font-size: 16px; font-family: "微软雅黑"; color: #f2f4f6;}
+.product ul li:hover span{background: #21a8f7;}
+
+.news{width: 1200px; margin: 0 auto;}
+.news img{margin-right: 40px; float: left;}
+.news ul{float: right; width: 390px;}
+.news ul li{margin-top: 60px; float: right;padding-left: 65px; background: url(../img/news_left.png) no-repeat left;}
+.news ul li:first-child{margin-top: 30px; }
+/*.news ul li .news_right{width: 305px; float: left;}*/
+.news ul li h4 a{font-size: 15px; font-weight: normal; font-family: "微软雅黑";}
+.news ul li p a{font-size: 15px; font-weight: normal; font-family: "微软雅黑";}
+.news ul li:hover a{color: #2295e3;}
+/*.news ul li:hover a{background: url(../img/news_left_hover.png) no-repeat; }*/
+.news ul li:hover{background: url(../img/news_left_hover.png) no-repeat left;}
+
+.news .more{float: right; margin-top: 26px; display: block; width: 110px; height: 49px; background: url(../img/more.png) no-repeat; text-align: center; line-height: 29px; font-size: 15px; font-family: "微软雅黑"; color: #ffffff;}
+
+
+.contact{width: 1200px; margin: 0 auto;}
+.contact .contact_left{float: left; width: 826px; margin-bottom:109px ;}
+.contact .contact_left h5{float: left; display: block; width: 826px; height: 34px;margin-bottom: 22px;  font-size: 20px; font-family: "微软雅黑"; font-weight: normal; border-bottom:3px solid #8bcefb ;}/*7 27*/
+.contact .contact_left input{ 
+	line-height: 48px;
+	color: #e9edf6;
+	width: 381px;  
+	border:0; 
+	outline:none; 
+	height: 48px; 
+	background: #beb9bd; 
+	float: right; 
+	font-size: 20px; 
+	font-family: "微软雅黑";
+	padding-left: 8px;
+	}
+.contact .contact_left .input-textsize-L{margin-bottom: -20px;}
+.contact .contact_left .name{float: left;}
+.contact .contact_left textarea{font-size: 20px; font-family: "微软雅黑"; color: #e9edf6; padding-top: 8px; border:0;outline:none;overflow:hidden; resize:none; padding-left: 8px;height: 149px; width: 818px; background:#beb9bd ; margin-top: 35px;}
+.contact .contact_left .sub{float: left; background: url(../img/sub1.png) no-repeat; display: block; width: 118px; line-height: 42px; height: 42px; cursor:pointer; font-size: 20px; font-family: "微软雅黑";padding: 0; color: #ffffff;}
+.code{float: right; margin-top: 22px; margin-bottom: 19px;}
+.code label{color: #0c6eae; font-size: 19px; font-family: "微软雅黑"; float: right;line-height: 44px;}
+.contact .contact_left.code input{background: #beb9bd;margin-top: 0px;  border:0;outline:none; width: 252px; height: 35px;float: right; padding-left:8px ; line-height: 35px;}
+.code img{float: right; margin-left: 34px; cursor: pointer;}
+.sub{cursor: pointer; border: none; width: 650px; height: 35px;margin-top: 22px;  background: #2ca6f8; float: right; margin-right: 14px; color: #fff; font-size: 19px; font-family: "微软雅黑";}
+
+.contact .contact_right{width: 300px; float: right;}/*29*/
+.contact .contact_right h5{margin-bottom:20px ; width: 300px; height: 34px; float: left; font-size: 20px; font-family: "微软雅黑"; font-weight: normal;border-bottom:3px solid #8bcefb;}
+.contact .contact_right ul{float: left;}
+.contact .contact_right ul li{margin: 11px 0px; float: left; width: 300px; font-size: 20px; font-family: "微软雅黑";}
+
+
+
+
+
+
+
+
+
+

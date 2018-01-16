@@ -1,0 +1,58 @@
+.title{width: 355px; height: 113px; padding-top: 120px; background: url(../img/title_bg.png) no-repeat; text-align: center; margin: 0 auto;}
+.title h3{font-size: 24px; font-family: Cambria Math; line-height: 42px;  font-weight:normal;}
+.title h3 span{color: #dd1e11;}
+
+
+
+.content{width: auto; background: #e9edf6; }
+/*.content_bg{width: 100%; background: #e9edf6; }*/
+.contentbox{width: 1200px; margin: 0 auto;}
+.content .sidebar{float: left;  width: 303px;}
+.content .sidebar h3{float: left; display: block; width: 303px; height: 67px; background: #2295e3; text-align: center; font-size: 21px; font-family: "微软雅黑"; color: #ffffff; line-height: 67px; margin-bottom: 3px;}
+.content .sidebar ul{float: left;}
+.content .sidebar ul li a{display: block; width: 303px; height: 54px; color: #ffffff; border-bottom: 3px solid #96cbef; background: #2ca6f8; text-align: center; line-height: 54px; font-size: 19px; font-family: "微软雅黑";}
+.content .sidebar ul li:first-child{border-top:3px solid #1d86cd ;}
+.content .sidebar ul li div{width: 303px; height: 19px; border-bottom: 0px; background: #2ca6f8;}
+.content .sidebar ul li a:hover{background: #dc2824;}
+.content .sidebar ul li .current{background: #DC2824;}
+
+
+.location_main{width: 878px;  float: right;  }
+.location_main .location{width: 878px; height: 64px; float: right; background: url(../img/location.png) no-repeat;}
+.location_main .location h4{font-weight: normal; font-size: 24px; font-family: "微软雅黑"; color: #ffffff;display: block; float: left; line-height: 55px; margin-left: 63px;}
+.location_main .location p{display: block; float: right; font-size: 16px; font-family: "微软雅黑"; color: #ffffff; margin-right: 14px; line-height: 64px;}
+.location_main .location p a{font-size: 16px; font-family: "微软雅黑"; color: #ffffff;}
+.location_main .location p span{color: #dc2824;}
+
+
+.location_main ul{float: right; background: #f7f8f8;  width: 855px; margin: -8px 13px 0px 0px; margin-bottom: 36px; }
+.location_main ul li{width: 855px; height: 190px; border-bottom: 3px solid #e9edf6;}
+.location_main ul .last{width: 855px; height: 16px; border: 0;}
+.location_main ul li a img{float: left; margin-left: 11px; margin-top: 17px;}
+
+
+.location_main ul li div{width: 465px; float: right; height: 120px; margin-right: 160px; margin-top: 25px;}
+.location_main ul li h3 a{font-size: 18px; font-family: "微软雅黑"; color:#1d8fdd ;}
+.location_main ul li span{font-size: 11px; font-family: "微软雅黑"; display: block; margin-left: 5px; margin-bottom: 15px;}
+.location_main ul li p a{font-size: 13px; font-family: "微软雅黑"; color: #060606;}
+.location_main ul li p{text-indent: 2em;}
+.location_main ul li .news_more{font-size: 13px; font-family: "微软雅黑"; display: block; width: 145px; height: 33px;float: right; background: url(../img/news_list.png) no-repeat; line-height: 33px; text-align: center; margin-right:11px ;}
+.location_main ul li .news_more:hover{background: url(../img/news_list_hover.png) no-repeat;}
+
+
+.location_main .page{ margin-left: 275px; margin-bottom: 45px; float: left;}
+.location_main .page .index a{width: 35px; height: 20px; font-size: 12px; font-family: "微软雅黑"; line-height: 20px; text-align: center; display: block;}
+.location_main .page .index a:hover{background: #db342d;}
+.location_main .page .prev a{width: 45px; height: 20px; font-size: 12px; font-family: "微软雅黑"; line-height: 20px; text-align: center; display: block;}
+.location_main .page .prev a:hover{background: #db342d;}
+.location_main .page li{float: left; margin: 0 4px;}
+.location_main .page li a{display: block; font-size: 12px; font-family: "微软雅黑"; width: 25px; height: 20px; line-height: 20px; text-align: center; }
+.location_main .page li a:hover{background: #db342d;}
+.location_main .page li .on{background: #db342d;}
+
+/*.location_main .page{width: 100%; height: 1px; margin-left: 275px;}
+.location_main .page li{font-size: 12px; float: left; margin: 0 4px; font-family: "微软雅黑";}
+.location_main .page li a{display: block; padding: 5px 10px 5px 10px; margin-bottom: 44px;}
+.location_main .page li a:hover{background: #db342d;}*/
+
+

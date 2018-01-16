@@ -1,0 +1,47 @@
+
+		<div class="content clear">
+			<div class="content_bg clear">
+			<div class="contentbox clear">
+			<div class="title">
+				<div class="title_nbsp"></div>
+				<h3 id="jb"><span>Product</span> &nbsp;details</h3>
+				<h3>产品详情</h3>
+			</div>
+			
+			<div class="sidebar">
+				<h3>产品分类</h3>
+				<ul>					
+					<?php foreach ($pro_cate as $value ) { ?>		
+
+					<li><a href="index.php?mot=home&ctl=product&cid=<?php echo $value['id'] ?>#jb"<?php echo $value['id']==$id?'class="current"':''; ?>><?php echo $value['cate_name'] ?></a></li>
+					
+				<?php } ?>
+				</ul>
+			</div>
+			<div class="location_main">
+				<div class="location">
+				<h4>产品详情</h4>
+				<p><a href="<?php echo INDEX ?>">博兰特有限公司</a>&gt;<a href="<?php echo PRODUCT ?>"><span>产品中心</span></a></p>
+			</div>
+			
+			<div class="main_text">
+			<?php foreach ($pro_list as $value ) { 
+
+			  $value['details'] = htmlspecialchars_decode($value['details']);?>	
+
+				<h4><?php echo $value['pro_name'] ?></h4>
+
+				<img style="width: 628px;height: 473px;" src="<?php echo $value['image'] ?>" />
+
+				<p><?php echo $value['details'] ?></p>
+       
+             <?php } ?>
+			</div>
+			
+				
+				
+			</div>
+			</div>
+			</div>
+		</div>
+	

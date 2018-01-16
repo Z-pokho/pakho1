@@ -1,0 +1,51 @@
+
+		<div class="content clear">
+			<div class="content_bg clear">
+			<div class="contentbox clear">
+			<div class="title">
+				
+				<h3 id="jb"><span>News</span> &nbsp;center</h3>
+				<h3>新闻中心</h3>
+			</div>
+			
+			<div class="sidebar">
+				<h3>新闻中心</h3>
+				<ul>		
+				<?php foreach ($news_cate as $value ) { ?>			
+					<li><a href="index.php?mot=home&ctl=news&nid=<?php echo $value['id'] ?>#jb"<?php echo $value['id']==$id?'class="current"':''; ?>><?php echo $value['cate_name'] ?></a></li>
+				<?php } ?>
+				</ul>
+			</div>
+			<li class="location_main"  >
+				<div class="location">
+					<h4><?php echo $cate_name['cate_name'] ?></h4>
+					<p><a href="<?php echo INDEX ?>">博兰特有限公司</a>&gt;<a href="<?php echo NEWS ?>"><span>新闻中心</span></a></p>
+				</div>
+			
+				<ul>
+
+                   <?php foreach ($news_list as $key => $value) {
+
+                   $value['content'] = strip_tags(htmlspecialchars_decode($value['content'])); ?>
+                     
+					<li>
+						<a href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>"><img style="width: 204px;height: 132px;" src="<?php echo $value['image'] ?>" /></a>
+						<div class="text">
+							<h3><a href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>"><?php echo $value['title'] ?></a></h3>
+							<span><?php echo $value['create_time'] ?></span>
+							<p><a href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>"><?php echo mb_substr($value['content'],0,90,'utf-8')."..." ?></a></p>
+						</div>
+						<a class="news_more" href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>">
+							了解更多>>
+						</a>
+					</li>
+					<?php } ?>
+				</ul>
+
+				<ol class="page">
+					<?php echo $page ?>
+				</ol>
+				
+			</div>
+			</div>
+			</div>

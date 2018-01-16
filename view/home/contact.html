@@ -1,0 +1,61 @@
+
+	
+		<div class="content clear">
+			
+			<div class="contentbox">
+				<div class="title">
+					<div class="title_nbsp"></div>
+					<h3><span>Contact</span> &nbsp;us</h3>
+					  <h3>联系我们</h3>
+				</div>
+				
+				<div class="service">
+					<ul>
+						<li>公司名称：<?php echo $contact['name'] ?></li>
+						<li>公司地址 :<?php echo $contact['address'] ?></li>
+						<li>公司电话：<?php echo $contact['phone'] ?></li>
+						<li>QQ：<?php echo $contact['QQ'] ?></li>
+						<li>E-mail：<?php echo $contact['email'] ?> </li>
+						<li>关注我们：<?php echo $contact['contact'] ?></li>
+					</ul>
+					<div class="map">
+						<b><a href="<?php echo INDEX ?>">博兰特有限公司</a>—<a href="###"><span>联系我们</span></a></b>
+						<iframe src="<?php echo MAP ?>"  frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+				
+				<form method="post" action="index.php?mot=home&ctl=contact&act=index">
+					<div class="msg">
+						<ul>
+							<li>
+								<input type="text" name="name" value="姓名："/>
+							</li>
+							<li>
+								<input type="text" name="email" value="电子邮件："/>
+							</li>
+							<li>
+								<input type="text" name="phone" value="电话："/>
+							</li>
+							<li>
+								<input type="text" name="address" value="地址："/>
+							</li>
+						</ul>
+						
+						<textarea value="留言：" name="message"></textarea>
+
+                        <div class="code">
+                              <img id="cos" style=" width: 128px;height: 50px; cursor:pointer" src="index.php?mot=home&ctl=contact&act=code" onclick="this.src=this.src +'&'+Math.random()">
+                              <input style="height: 50px;" class="input-text size-L" type="text" onblur="if(this.value==''){this.value='}" onclick="if(this.value=='验证码:'){this.value='';}"  name="code">
+							<label>验证码：</label>
+						</div>
+						<input type="submit" value="提 &nbsp;交" class="sub" />
+						
+					</div>
+					
+					
+				</form>
+			</div>
+			
+		</div>
+	
+

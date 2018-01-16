@@ -1,0 +1,69 @@
+
+	
+		<div class="content clear">
+			<div class="content_bg clear">
+			<div class="contentbox clear">
+			<div class="title">
+				<div class="title_nbsp"></div>
+				<h3 id="jb"><span>News</span> &nbsp;detail</h3>
+				<h3>新闻详情</h3>
+			</div>
+			
+			<div class="sidebar">
+				<h3>公司介绍</h3>
+				<ul>				<!-- <?php echo $value['category_id']==$category_id?'class="current"':''; ?> -->
+				  <?php foreach ($news_cate as $value ) { ?>			
+					<li><a href="index.php?mot=home&ctl=news&nid=<?php echo $value['id'] ?>"<?php echo $value['id']==$id?'class="current"':''; ?>><?php echo $value['cate_name'] ?></a></li>
+				<?php } ?>
+				</ul>
+			</div>
+			<div class="location_main">
+				<div class="location">
+					<h4>新闻详情</h4>
+					<p><a href="<?php echo INDEX ?>">博兰特有限公司</a>&gt;<a href="<?php echo NEWS ?>"><span>新闻中心</span></a></p>
+				</div>
+			
+				<div class="main">
+				  <?php foreach ($news_list as $value ) { 
+
+					  $value['content'] = htmlspecialchars_decode($value['content']);?>	
+
+							<h4><?php echo $value['title'] ?></h4>
+
+							<p><?php echo $value['content'] ?></p>
+
+					<?php } ?>
+
+				<div class="flip">
+	   
+                   <?php if(empty($prev)){ ?>
+	                       
+	                       <a class="prev">已经没有啦</a>
+
+                        <?php }else{ ?> 
+
+                           <a href="index.php?mot=home&ctl=news_details&nid=<?php echo $prev['id'] ?>&cate_id=<?php echo $prev['category_id'] ?>#jb" class="prev">上一篇：<?php echo mb_substr($prev['title'],0,10,'utf-8'); ?></a>
+
+                       <?php } ?>
+
+					<?php if(empty($next)){ ?>
+
+	                       <a class="next">已经没有啦</a>
+
+                        <?php }else{ ?> 
+
+                           <a href="index.php?mot=home&ctl=news_details&nid=<?php echo $next['id'] ?>&cate_id=<?php echo $next['category_id'] ?>#jb" class="next">下一篇：<?php echo mb_substr($next['title'],0,10,'utf-8'); ?></a>
+
+                       <?php } ?>
+
+				</div>	
+						
+						
+				</div>
+				
+			</div>
+			</div>
+			</div>
+		</div>
+	
+

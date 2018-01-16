@@ -1,0 +1,137 @@
+
+		<div class="content">
+			<div class="about">
+				<div class="title">
+					<h3><span>Company</span> &nbsp;introduction</h3>
+					  <h3>公司介绍</h3>
+				</div>
+				
+				<ul class="about_us clear">
+					<li>
+						<a href="index.php?mot=home&ctl=about&id=<?php echo $image['id'] ?>&category_id=<?php echo $image['category_id'] ?>">
+							<img src="<?php echo $image['image4'] ?>" />
+						</a>
+						<div class="about_bg">	
+							<h4><a href="index.php?mot=home&ctl=about&id=<?php echo $image['id'] ?>&category_id=<?php echo $image['category_id'] ?>"><?php echo $cate_name['cate_name'] ?>&nbsp;</a></h4>
+							<br />
+							<?php $image['details'] = strip_tags(htmlspecialchars_decode($image['details'])); ?>
+							<p><?php echo mb_substr($image['details'],0,13,'utf-8') ?><br>
+							<?php echo mb_substr($image['details'],13,12,'utf-8') ?><br>
+							<?php echo mb_substr($image['details'],25,12,'utf-8') ?><br></p>
+						</div>
+					</li>
+
+					<li>
+						<a href="index.php?mot=home&ctl=about&id=<?php echo $image2['id'] ?>&category_id=<?php echo $image2['category_id'] ?>">
+							<img src="<?php echo $image2['image4'] ?>" />
+						</a>
+						<div class="about_bg">	
+							<h4><a href="index.php?mot=home&ctl=about&id=<?php echo $image2['id'] ?>&category_id=<?php echo $image2['category_id'] ?>"><?php echo $cate_name2['cate_name'] ?>&nbsp;</a></h4>
+							<br />
+							<?php $image2['details'] = strip_tags(htmlspecialchars_decode($image2['details'])); ?>
+							<p><?php echo mb_substr($image2['details'],0,13,'utf-8') ?><br>
+							<?php echo mb_substr($image2['details'],13,12,'utf-8') ?><br>
+							<?php echo mb_substr($image2['details'],25,12,'utf-8') ?><br></p>
+						</div>
+					</li>
+					<li>
+						<a href="index.php?mot=home&ctl=about&id=<?php echo $image3['id'] ?>&category_id=<?php echo $image3['category_id'] ?>">
+							<img src="<?php echo $image3['image4'] ?>" />
+						</a>
+						<div class="about_bg">	
+							<h4><a href="index.php?mot=home&ctl=about&id=<?php echo $image3['id'] ?>&category_id=<?php echo $image3['category_id'] ?>"><?php echo $cate_name3['cate_name'] ?>&nbsp;</a></h4>
+							<br />
+							<?php $image3['details'] = strip_tags(htmlspecialchars_decode($image3['details'])); ?>
+							<p><?php echo mb_substr($image3['details'],0,13,'utf-8') ?><br>
+							<?php echo mb_substr($image3['details'],13,12,'utf-8') ?><br>
+							<?php echo mb_substr($image3['details'],25,12,'utf-8') ?><br></p>
+						</div>
+					</li>
+				</ul>
+				
+			</div>
+		
+			<div class="product clear">
+				
+				<div class="title">
+					
+					<h3><span>Product</span> &nbsp;center</h3>
+					<h3>产品中心</h3>
+				</div>
+				
+				<div class="productbox">
+					<ul>
+
+                    <?php foreach ($pro as $key => $value) { ?>
+
+						<li>
+							<a href="index.php?mot=home&ctl=product_details&cid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>">
+								<img src="<?php echo $value['image'] ?>"/>
+								<span><?php echo $value['cate_name'] ?></span>
+							</a>
+						</li>
+
+                      <?php } ?>
+
+					</ul>
+				</div>
+			</div>	
+		
+			<div class="news clear">
+				<div class="title">
+					
+					<h3><span>News</span> &nbsp;center</h3>
+					<h3>新闻中心</h3>
+				</div>
+				<a href="index.php?mot=home&ctl=news_details&nid=<?php echo $n['id'] ?>&cate_id=<?php echo $n['category_id'] ?>"><img style="width: 723px;height: 582px;" src="<?php echo $n['image'] ?>" /></a>
+				<ul>
+
+				 <?php foreach ($news as $key => $value) { ?>
+				    
+                    <li style="width: 325px;">
+						<h4><a href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>"><?php echo $value['title'] ?></a></h4>
+						<p><a href="index.php?mot=home&ctl=news_details&nid=<?php echo $value['id'] ?>&cate_id=<?php echo $value['category_id'] ?>"><?php echo mb_substr($value['content'],0,'60','utf-8')."..." ?></a></p>
+					</li>
+               
+				 <?php } ?>
+					
+				</ul>
+				
+					<a href="<?php echo NEWS ?>" class="more">查看更多&gt;&gt;</a>
+				
+			</div>
+		
+			<div class="contact clear">
+				<div class="title">
+					
+					<h3><span>Contact</span> &nbsp;us</h3>
+					<h3>联系我们</h3>
+				</div>
+				
+				<form class="contact_left" action="index.php?mot=home&ctl=index&act=index" method="post">
+					<h5>留言板</h5>
+					<input type="text" value="姓名:" name="name" class="name"  />
+					<input type="text" value="电话:" name="phone" />
+					<textarea name="message" value="留言:"></textarea>
+					<input type="submit" class="sub" value="提交" />
+					<div class="code">
+                      <img id="cos" style=" width: 128px;height: 48px; cursor:pointer" src="index.php?mot=home&ctl=index&act=code" onclick="this.src=this.src +'&'+Math.random()">
+                      <input class="input-textsize-L" type="text" onblur="if(this.value==''){this.value='}" onclick="if(this.value=='验证码:'){this.value='';}"  name="code">
+					<label>验证码：</label>
+					</div>
+				</form>
+				
+				<div class="contact_right">
+					<h5>联系我们</h5>
+					<ul>
+						<li>电话：<?php echo $contact['phone'] ?></li>
+						<li>邮箱：<?php echo $contact['email'] ?></li>
+						<li>QQ：<?php echo $contact['QQ'] ?></li>
+						<li>地址：<?php echo $contact['address'] ?></li>
+						<li>邮编：<?php echo $contact['z_code'] ?></li>
+					</ul>
+				</div>
+				
+			</div>
+		
+		</div>
